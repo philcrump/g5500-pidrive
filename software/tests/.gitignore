@@ -1,0 +1,11 @@
+*.o
+*.d
+
+adc_encoder
+adc_supplies
+az_motordrive
+el_motordrive
+gpsd
+i2c_imu
+motordrive
+relays

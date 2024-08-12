@@ -1,0 +1,85 @@
+<!doctype html>
+<html class="h-100" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Portable HamTV Station</title>
+    <link rel="icon" href="favicon_128.png"/>
+
+    <link rel="stylesheet" href="/lib/bootstrap-5.3.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/lib/dygraph-2.2.1.min.css">
+
+    <script defer src="/lib/bootstrap-5.3.3/js/bootstrap.min.js"></script>
+    <script defer src="/lib/dygraph-2.2.1.min.js"></script>
+    <script defer src="/lib/mithril-2.2.2.min.js"></script>
+    <script defer src="/lib/strWebsocket-1.0.js"></script>
+
+    <link rel="stylesheet" href="index.css">
+    <script defer src="index.js"></script>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Portable HamTV Ground Station</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav me-auto mb-2 mb-md-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main class="container-fluid">
+  <div id="main-ui" class="container-fluid row mt-2">
+    <div class="col-xl-3">
+      <h2>Antenna Control</h2>
+      <p><label>Azimuth</label><input id="control-az-input"></input></p>
+      <p><label>Elevation</label><input id="control-el-input"></input></p>
+      <p><button id="control-azel-submit">Set</button></p>
+      <div id="demand-status-ui"></div>
+      <h2>Antenna Status</h2>
+      <div id="encoder-status-ui"></div>
+      <div id="heading-status-ui"></div>
+      <p><button id="control-calibrate-submit">Calibrate</button></p>
+    </div>
+    <div class="col-xl-3">
+      <h2>Sun</h2>
+      <div id="sun-status-ui"></div>
+      <p><button id="control-sun-submit">Set Sun track</button></p>
+      <h2>ISS</h2>
+      <div id="iss-status-ui"></div>
+      <p><button id="control-iss-submit">Set ISS track</button></p>
+    </div>
+    <div class="col-xl-3">
+      <div id="gpsd-status-ui"></div>
+    </div>
+    <div class="col-xl-3">
+      <div id="voltages-status-ui"></div>
+    </div>
+  </div>
+</main>
+
+<div id="disconnectionSet">
+    <div id="disconnectionGrayout"></div>
+    <div id="disconnectionModal">
+        <h4>Connection Lost</h4>
+        <p>Connection to the device has been lost. Retrying..</p>
+    </div>
+</div>
+
+</body>
+
+</html>
