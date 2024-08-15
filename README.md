@@ -50,6 +50,30 @@ MCP3202 12-bit ADC measures the wiper voltage on each of the Az+El Potentiometer
 
 Motor drive using pigpio's excellent ability to run hardware-timed PWM on every GPIO. https://abyz.me.uk/rpi/pigpio/index.html
 
+## Tests
+
+* Body diode clamping of high-z driver on other pole is enough to prevent motion of AC motor.
+* Heatsinking of existing drivers is very inadequate. (Blown EL_B1/EL_B2 )
+* * Added DIY copper tab heatsinks to both side of PCB
+* 22R resistor between 48V & 5V ground domains had approx 1V across it (~50mA)
+* * Removed & shorted out.
+
+
+* Pi Running: 0.07A @ 48V
+* 1x Motor drive: 0.67A @ 48V
+
+
+For attachment to mast pole: https://www.ebay.co.uk/itm/265428394116
+
+
+
+ebay wire is 16awg 1.5mm^2
+
+
+12-48V: https://uk.rs-online.com/web/p/dc-dc-converters/1757784
+
+M3.5 ring terminals for meanwell 12v mains PSU   https://uk.rs-online.com/web/p/ring-terminals/0534222
+
 ## Authors
 
 * Phil Crump M0DNY <phil@philcrump.co.uk>
